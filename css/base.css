@@ -1,0 +1,19 @@
+*, *::before, *::after {
+  font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #eef2f7;
+  background-image: radial-gradient(circle, #c8d6e8 1px, transparent 1px);
+  background-size: 24px 24px;
+  color: #0f172a;
+}
+
+section {
+  scroll-margin-top: 60px;
+}
