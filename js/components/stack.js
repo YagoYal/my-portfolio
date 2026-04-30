@@ -16,14 +16,14 @@ window.Components.stack = {
 
   render() {
     return `
-      <section id="stack" class="py-24">
-        <div class="max-w-7xl mx-auto px-10">
+      <section id="stack" class="py-14 md:py-24">
+        <div class="max-w-7xl mx-auto px-5 md:px-10">
           <span class="inline-flex items-center gap-2 border border-blue-400 text-blue-600 text-sm px-4 py-1 rounded-full mb-5">
             <span class="w-2 h-2 rounded-full bg-blue-500 inline-block"></span>
             Tecnologias
           </span>
-          <h2 class="font-black mb-14" style="font-size:3rem;color:#0f172a;">Stack Técnico</h2>
-          <div class="grid grid-cols-3 gap-6">
+          <h2 class="font-black mb-10 md:mb-14" style="font-size:clamp(2rem,6vw,3rem);color:#0f172a;">Stack Técnico</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             ${window.Data.stackCategories.map((cat) => this._renderCategory(cat)).join('')}
           </div>
         </div>

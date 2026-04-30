@@ -22,23 +22,23 @@ window.Components.about = {
 
   render() {
     return `
-      <section id="about" class="py-24">
-        <div class="max-w-7xl mx-auto px-10">
+      <section id="about" class="py-14 md:py-24">
+        <div class="max-w-7xl mx-auto px-5 md:px-10">
           <span class="inline-flex items-center gap-2 border border-blue-400 text-blue-600 text-sm px-4 py-1 rounded-full mb-5">
             <span class="w-2 h-2 rounded-full bg-blue-500 inline-block"></span>
             Sobre Mim
           </span>
-          <h2 class="font-black mb-14" style="font-size:3rem;color:#0f172a;">Quem sou eu</h2>
+          <h2 class="font-black mb-10 md:mb-14" style="font-size:clamp(2rem,6vw,3rem);color:#0f172a;">Quem sou eu</h2>
 
-          <div class="flex gap-16 items-start">
+          <div class="flex flex-col md:flex-row gap-10 md:gap-16 items-start">
 
             <!-- Foto -->
-            <div class="flex-shrink-0">
+            <div class="flex-shrink-0 mx-auto md:mx-0">
               <div class="rounded-2xl overflow-hidden shadow-lg border-4 border-white ring-2 ring-blue-100 inline-block">
                 <img
                   src="assets/YagoS.jpeg"
                   alt="Foto de Yago Silva"
-                  class="block max-w-xs"
+                  class="block max-w-xs w-full"
                 />
               </div>
             </div>

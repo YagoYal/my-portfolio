@@ -22,15 +22,15 @@ window.Components.contact = {
 
   render() {
     return `
-      <section id="contact" class="py-24">
-        <div class="max-w-7xl mx-auto px-10">
-          <div class="text-center mb-14">
-            <h2 class="font-black mb-4" style="font-size:3rem;color:#0f172a;">Solicitar Acesso</h2>
+      <section id="contact" class="py-14 md:py-24">
+        <div class="max-w-7xl mx-auto px-5 md:px-10">
+          <div class="text-center mb-10 md:mb-14">
+            <h2 class="font-black mb-4" style="font-size:clamp(2rem,6vw,3rem);color:#0f172a;">Solicitar Acesso</h2>
             <p class="text-slate-500 text-lg leading-relaxed">
-              Interessado em colaborar? Envie uma mensagem e vamos construir<br>algo incrível juntos.
+              Interessado em colaborar? Envie uma mensagem e vamos construir algo incrível juntos.
             </p>
           </div>
-          <div class="flex gap-12 items-start">
+          <div class="flex flex-col md:flex-row gap-8 md:gap-12 items-start">
             <div class="flex-1 card">
               <form id="contact-form" novalidate>
 

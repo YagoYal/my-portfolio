@@ -45,26 +45,26 @@ window.Components.hero = {
   render() {
     return `
       <section id="home" class="min-h-screen flex flex-col">
-        <div class="flex-1 max-w-7xl mx-auto w-full px-10 flex items-center py-16">
-          <div class="flex items-center justify-between w-full gap-10">
+        <div class="flex-1 max-w-7xl mx-auto w-full px-5 md:px-10 flex items-center py-10 md:py-16">
+          <div class="flex flex-col md:flex-row items-center md:justify-between w-full gap-8 md:gap-10">
 
-            <div class="max-w-lg">
+            <div class="max-w-lg text-center md:text-left">
               <span class="inline-flex items-center gap-2 border border-emerald-400 text-emerald-600 text-sm px-4 py-1 rounded-full mb-8">
                 <span class="w-2 h-2 rounded-full bg-emerald-400 inline-block"></span>
                 Sistema Operacional
               </span>
-              <h1 class="font-black leading-none mb-6 tracking-tight" style="font-size:clamp(2.8rem,5vw,4.2rem);color:#0f172a;">
+              <h1 class="font-black leading-none mb-6 tracking-tight" style="font-size:clamp(2.2rem,7vw,4.2rem);color:#0f172a;">
                 ARQUITETANDO<br>
                 <span style="color:#2563eb;">SISTEMAS</span><br>
                 DIGITAIS<br>
                 RESILIENTES
               </h1>
               <p class="text-slate-500 text-lg leading-relaxed mb-8">
-                Desenvolvedor Back-End com foco em Java,<br>
-                construindo soluções robustas e seguras para o<br>
+                Desenvolvedor Back-End com foco em Java,
+                construindo soluções robustas e seguras para o
                 mundo digital.
               </p>
-              <div class="flex items-center gap-4">
+              <div class="flex flex-wrap justify-center md:justify-start items-center gap-3">
                 <a href="assets/YagoSilva-CV.pdf" download="Yago_Silva_CV.pdf" class="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-700 transition text-sm">
                   <i data-lucide="download" class="w-4 h-4"></i> Download CV
                 </a>
@@ -72,12 +72,12 @@ window.Components.hero = {
                   <i data-lucide="mail" class="w-4 h-4"></i> Contato
                 </a>
               </div>
-              <div class="mt-10">
+              <div class="mt-10 flex justify-center md:justify-start">
                 <a href="#about"><i data-lucide="arrow-down" class="w-5 h-5 text-slate-400"></i></a>
               </div>
             </div>
 
-            <div class="flex-1 flex justify-center items-center">
+            <div class="hidden md:flex flex-1 justify-center items-center">
               ${this._renderSphere()}
             </div>
           </div>

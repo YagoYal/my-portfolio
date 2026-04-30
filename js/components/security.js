@@ -14,19 +14,19 @@ window.Components.security = {
 
   render() {
     return `
-      <section id="security" class="py-24">
-        <div class="max-w-7xl mx-auto px-10">
-          <div class="text-center mb-14">
+      <section id="security" class="py-14 md:py-24">
+        <div class="max-w-7xl mx-auto px-5 md:px-10">
+          <div class="text-center mb-10 md:mb-14">
             <span class="inline-flex items-center gap-2 border border-emerald-400 text-emerald-600 text-sm px-4 py-1 rounded-full mb-5">
               <span class="w-2 h-2 rounded-full bg-emerald-400 inline-block"></span>
               Protocolo de Confiança
             </span>
-            <h2 class="font-black mb-4" style="font-size:3rem;color:#0f172a;">Camada de Segurança</h2>
+            <h2 class="font-black mb-4" style="font-size:clamp(2rem,6vw,3rem);color:#0f172a;">Camada de Segurança</h2>
             <p class="text-slate-500 text-lg max-w-lg mx-auto leading-relaxed">
               Cada linha de código é construída pensando em proteção, performance e confiabilidade.
             </p>
           </div>
-          <div class="grid grid-cols-3 gap-6">
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             ${window.Data.securityFeatures.map((f) => this._renderCard(f)).join('')}
           </div>
         </div>
