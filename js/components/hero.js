@@ -65,7 +65,7 @@ window.Components.hero = {
                 mundo digital.
               </p>
               <div class="flex items-center gap-4">
-                <a href="assets/curriculo.pdf" download="Yago_Almeida_CV.pdf" class="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-700 transition text-sm">
+                <a href="assets/YagoSilva-CV.pdf" download="Yago_Silva_CV.pdf" class="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-700 transition text-sm">
                   <i data-lucide="download" class="w-4 h-4"></i> Download CV
                 </a>
                 <a href="#contact" rel="noopener noreferrer" class="inline-flex items-center gap-2 border border-slate-300 bg-white text-slate-700 px-6 py-3 rounded-xl font-semibold hover:bg-slate-50 transition text-sm">

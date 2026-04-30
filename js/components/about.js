@@ -31,21 +31,38 @@ window.Components.about = {
           <h2 class="font-black mb-14" style="font-size:3rem;color:#0f172a;">Quem sou eu</h2>
 
           <div class="flex gap-16 items-start">
-            <div class="flex-1 max-w-lg">
-              <p class="text-slate-600 text-lg leading-relaxed mb-6">
-                Desenvolvedor back-end com foco em <strong class="text-slate-900">Java</strong>. Graduado em
-                <strong class="text-slate-900">Sistemas para Web</strong> e atualmente cursando a segunda
-                graduação em <strong class="text-slate-900">Sistemas de Informação</strong>.
-              </p>
-              <p class="text-slate-600 text-lg leading-relaxed">
-                Construo projetos pessoais com foco em arquitetura limpa, segurança e escalabilidade.
-                Estou sempre à disposição para colaborar em projetos de terceiros e expandir meu
-                conhecimento em soluções de back-end robustas.
-              </p>
+
+            <!-- Foto -->
+            <div class="flex-shrink-0">
+              <div class="rounded-2xl overflow-hidden shadow-lg border-4 border-white ring-2 ring-blue-100 inline-block">
+                <img
+                  src="assets/YagoS.jpeg"
+                  alt="Foto de Yago Silva"
+                  class="block max-w-xs"
+                />
+              </div>
             </div>
-            <div class="flex-1 flex flex-col gap-4">
-              ${this._infoCards.map((c) => this._renderCard(c)).join('')}
+
+            <!-- Texto + cards -->
+            <div class="flex-1 flex flex-col gap-8">
+              <div>
+                <p class="text-slate-600 text-lg leading-relaxed mb-6">
+                  Desenvolvedor back-end com foco em <strong class="text-slate-900">Java</strong>. Graduado em
+                  <strong class="text-slate-900">Sistemas para Web</strong> e atualmente cursando a segunda
+                  graduação em <strong class="text-slate-900">Sistemas de Informação</strong>.
+                </p>
+                <p class="text-slate-600 text-lg leading-relaxed">
+                  Construo projetos pessoais com foco em arquitetura limpa, segurança e escalabilidade.
+                  Estou sempre à disposição para colaborar em projetos de terceiros e expandir meu
+                  conhecimento em soluções de back-end robustas.
+                </p>
+              </div>
+              <br />
+              <div class="flex flex-col gap-4">
+                ${this._infoCards.map((c) => this._renderCard(c)).join('')}
+              </div>
             </div>
+
           </div>
         </div>
       </section>`;
