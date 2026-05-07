@@ -8,16 +8,20 @@ window.Components.contact = {
   ],
 
   _renderLink({ icon, label, value }) {
+    const isExternal = value.startsWith('http');
+    const href = isExternal ? value : `mailto:${value}`;
+    const targetAttrs = isExternal ? ' target="_blank" rel="noopener noreferrer"' : '';
+
     return `
-      <div class="flex items-center gap-5">
+      <a href="${href}"${targetAttrs} class="flex items-center gap-5 group">
         <div class="icon-box w-14 h-14 rounded-2xl">
           <i data-lucide="${icon}" class="w-6 h-6 text-blue-600"></i>
         </div>
         <div>
           <p class="text-xs font-semibold text-slate-400 tracking-widest uppercase mb-0.5">${label}</p>
-          <p class="font-bold text-slate-900">${value}</p>
+          <p class="font-bold text-slate-900 group-hover:text-blue-600 transition">${value}</p>
         </div>
-      </div>`;
+      </a>`;
   },
 
   render() {
