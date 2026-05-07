@@ -2,14 +2,14 @@ window.Data = window.Data || {};
 
 window.Data.projects = [
   {
-    badge: 'Full-Stack Deployment',
-    date: 'Jul 2023 - Dez 2023',
-    title: 'Sistema de Gestão',
+    badge: 'AI Model Deployment',
+    date: '2026',
+    title: 'Lunar Ice Detection',
     description:
-      'Aplicação web completa com back-end em Java Spring Boot e front-end React. Autenticação JWT, CRUD completo e deploy automatizado.',
+      'Aplicação de inteligência artificial para detectar indícios de gelo lunar a partir de dados e visualizações geoespaciais, com interface web publicada na Vercel.',
     type: 'server',
-    projectUrl: '#',
-    codeUrl: '#',
+    projectUrl: 'https://advanced-ai-model-lunar-ice-detecti.vercel.app',
+    codeUrl: 'https://github.com/YagoYal/Advanced-ai-model-lunar-ice-detection',
   },
   {
     badge: 'Fluxo de Dados Criptografado',
