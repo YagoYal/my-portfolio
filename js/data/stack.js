@@ -3,14 +3,14 @@ window.Data = window.Data || {};
 window.Data.stackCategories = [
   {
     title: 'Back-End',
-    chips: ['Java', 'Spring Boot', 'JWT / API REST', 'Maven', 'Swagger', 'Python'],
+    chips: ['TypeScript', 'Node.js', 'API REST', 'Validação de Dados', 'Rotas Tipadas'],
   },
   {
-    title: 'Front-End',
-    chips: ['TypeScript', 'React / Next.js', 'HTML / CSS / JS', 'Material UI / Figma'],
+    title: 'IA e Dados',
+    chips: ['Python', 'Machine Learning', 'Detecção de Padrões', 'Dados Geoespaciais', 'Visualização de Dados'],
   },
   {
-    title: 'Infraestrutura',
-    chips: ['SQL / MySQL', 'AWS', 'Docker', 'GitHub / GitLab', 'Power BI'],
+    title: 'Front-End e Deploy',
+    chips: ['HTML', 'CSS', 'JavaScript', 'Vercel', 'GitHub'],
   },
 ];
