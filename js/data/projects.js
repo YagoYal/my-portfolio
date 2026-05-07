@@ -12,13 +12,13 @@ window.Data.projects = [
     codeUrl: 'https://github.com/YagoYal/Advanced-ai-model-lunar-ice-detection',
   },
   {
-    badge: 'Fluxo de Dados Criptografado',
-    date: 'Jul 2023 - Dez 2023',
-    title: 'API de Finanças',
+    badge: 'Typed Backend API',
+    date: '2026',
+    title: 'Backend Tipado',
     description:
-      'REST API segura para gerenciamento financeiro com criptografia de dados sensíveis e relatórios em tempo real.',
+      'Backend tipado com foco em estrutura, validação de dados e organização de rotas, pensado para manter a API mais previsível, segura e fácil de evoluir.',
     type: 'network',
-    projectUrl: '#',
-    codeUrl: '#',
+    projectUrl: 'https://github.com/YagoYal/backend-tipado',
+    codeUrl: 'https://github.com/YagoYal/backend-tipado',
   },
 ];
