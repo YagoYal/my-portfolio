@@ -16,7 +16,7 @@
   to { clip-path: inset(0 0% 0 0); }
 }
 @keyframes spacingIn {
-  to { opacity: 1; letter-spacing: -.05em; }
+  to { opacity: 1; letter-spacing: -.04em; }
 }
 
 /* status dot */
