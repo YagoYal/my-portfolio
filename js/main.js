@@ -1,16 +1,14 @@
-const { hero, about, stack, security, projects, contact, footer, nav } = window.Components;
+const { nav, hero, projects, about, stack, security, contact, footer } = window.Components;
 
 document.getElementById('app').innerHTML = [
+  nav.render(),
   hero.render(),
+  projects.render(),
   about.render(),
   stack.render(),
   security.render(),
-  projects.render(),
   contact.render(),
   footer.render(),
-  nav.render(),
 ].join('');
 
-lucide.createIcons();
-nav.init();
 contact.init();

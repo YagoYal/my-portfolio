@@ -3,122 +3,91 @@ window.Components = window.Components || {};
 window.Components.projects = {
   _illustrations: {
     server: `
-      <svg width="100%" height="100%" viewBox="0 0 640 224" preserveAspectRatio="xMidYMid slice">
-        <rect width="640" height="224" fill="#06021a"/>
-        <rect x="180" y="20" width="280" height="184" rx="4" fill="#0d0628" stroke="#312e81" stroke-width="1"/>
-        <rect x="188" y="28"  width="264" height="18" rx="2" fill="#0f0a2e" stroke="#3730a3" stroke-width="0.5"/>
-        <rect x="188" y="50"  width="264" height="18" rx="2" fill="#0f0a2e" stroke="#3730a3" stroke-width="0.5"/>
-        <rect x="188" y="72"  width="264" height="18" rx="2" fill="#1e1b4b" stroke="#4f46e5" stroke-width="0.5"/>
-        <rect x="188" y="94"  width="264" height="18" rx="2" fill="#0f0a2e" stroke="#3730a3" stroke-width="0.5"/>
-        <rect x="188" y="116" width="264" height="18" rx="2" fill="#0f0a2e" stroke="#3730a3" stroke-width="0.5"/>
-        <rect x="188" y="138" width="264" height="18" rx="2" fill="#1e1b4b" stroke="#4f46e5" stroke-width="0.5"/>
-        <rect x="188" y="160" width="264" height="18" rx="2" fill="#0f0a2e" stroke="#3730a3" stroke-width="0.5"/>
-        <rect x="188" y="182" width="264" height="16" rx="2" fill="#0f0a2e" stroke="#3730a3" stroke-width="0.5"/>
-        <circle cx="200" cy="37"  r="3" fill="#22c55e" opacity="0.9"/>
-        <circle cx="210" cy="37"  r="3" fill="#22c55e" opacity="0.7"/>
-        <circle cx="200" cy="59"  r="3" fill="#818cf8" opacity="0.9"/>
-        <circle cx="210" cy="59"  r="3" fill="#22c55e" opacity="0.7"/>
-        <circle cx="200" cy="81"  r="3" fill="#22c55e" opacity="0.9"/>
-        <circle cx="200" cy="103" r="3" fill="#f59e0b" opacity="0.8"/>
-        <circle cx="210" cy="103" r="3" fill="#22c55e" opacity="0.7"/>
-        <circle cx="200" cy="125" r="3" fill="#818cf8" opacity="0.9"/>
-        <circle cx="200" cy="147" r="3" fill="#22c55e" opacity="0.9"/>
-        <circle cx="200" cy="169" r="3" fill="#22c55e" opacity="0.7"/>
-        <path d="M460 80  Q520 80  520 120 Q520 160 460 160" stroke="#818cf8" stroke-width="3" fill="none" opacity="0.5"/>
-        <path d="M460 90  Q510 90  510 130 Q510 155 460 155" stroke="#6366f1" stroke-width="2" fill="none" opacity="0.4"/>
-        <path d="M460 100 Q500 100 500 140" stroke="#4f46e5" stroke-width="2.5" fill="none" opacity="0.3"/>
+      <svg viewBox="0 0 400 220" preserveAspectRatio="xMidYMid slice">
+        <rect width="400" height="220" fill="#080808"/>
+        <rect x="110" y="18" width="180" height="184" fill="#0d0d0d" stroke="#1a1a1a" stroke-width="1"/>
+        <rect x="118" y="26" width="164" height="13" fill="#111" stroke="#222" stroke-width=".5"/>
+        <rect x="118" y="44" width="164" height="13" fill="#0d0d0d" stroke="#1a1a1a" stroke-width=".5"/>
+        <rect x="118" y="62" width="164" height="13" fill="#111" stroke="#222" stroke-width=".5"/>
+        <rect x="118" y="80" width="164" height="13" fill="#0d0d0d" stroke="#7c6aff" stroke-width=".4" opacity=".6"/>
+        <rect x="118" y="98" width="164" height="13" fill="#0d0d0d" stroke="#1a1a1a" stroke-width=".5"/>
+        <rect x="118" y="116" width="164" height="13" fill="#111" stroke="#222" stroke-width=".5"/>
+        <rect x="118" y="134" width="164" height="13" fill="#0d0d0d" stroke="#7c6aff" stroke-width=".4" opacity=".4"/>
+        <circle cx="126" cy="32" r="2.5" fill="#00e676" opacity=".8"/>
+        <circle cx="133" cy="32" r="2.5" fill="#ffb300" opacity=".7"/>
+        <circle cx="126" cy="50" r="2.5" fill="#7c6aff" opacity=".8"/>
+        <circle cx="126" cy="68" r="2.5" fill="#00e676" opacity=".6"/>
+        <path d="M290 75 Q345 75 345 110 Q345 148 290 148" stroke="#7c6aff" stroke-width="2.5" fill="none" opacity=".4"/>
+        <path d="M290 88 Q333 88 333 118 Q333 145 290 145" stroke="#00e5ff" stroke-width="1.5" fill="none" opacity=".25"/>
+        <circle cx="290" cy="75" r="3" fill="#7c6aff" opacity=".7"/>
+        <circle cx="290" cy="148" r="3" fill="#00e5ff" opacity=".5"/>
       </svg>`,
 
     network: `
-      <svg width="100%" height="100%" viewBox="0 0 640 224" preserveAspectRatio="xMidYMid slice">
-        <rect width="640" height="224" fill="#0d0628"/>
-        <line x1="320" y1="112" x2="220" y2="60"  stroke="#818cf8" stroke-width="1.5" opacity="0.45"/>
-        <line x1="320" y1="112" x2="420" y2="60"  stroke="#818cf8" stroke-width="1.5" opacity="0.45"/>
-        <line x1="320" y1="112" x2="180" y2="140" stroke="#818cf8" stroke-width="1.5" opacity="0.45"/>
-        <line x1="320" y1="112" x2="460" y2="140" stroke="#818cf8" stroke-width="1.5" opacity="0.45"/>
-        <line x1="320" y1="112" x2="300" y2="185" stroke="#818cf8" stroke-width="1.5" opacity="0.45"/>
-        <line x1="320" y1="112" x2="380" y2="185" stroke="#818cf8" stroke-width="1.5" opacity="0.45"/>
-        <line x1="220" y1="60"  x2="140" y2="30"  stroke="#6366f1" stroke-width="1" opacity="0.3"/>
-        <line x1="220" y1="60"  x2="160" y2="90"  stroke="#6366f1" stroke-width="1" opacity="0.3"/>
-        <line x1="420" y1="60"  x2="500" y2="30"  stroke="#6366f1" stroke-width="1" opacity="0.3"/>
-        <line x1="420" y1="60"  x2="490" y2="90"  stroke="#6366f1" stroke-width="1" opacity="0.3"/>
-        <line x1="180" y1="140" x2="110" y2="170" stroke="#6366f1" stroke-width="1" opacity="0.3"/>
-        <line x1="460" y1="140" x2="530" y2="170" stroke="#6366f1" stroke-width="1" opacity="0.3"/>
-        <line x1="300" y1="185" x2="260" y2="215" stroke="#6366f1" stroke-width="1" opacity="0.3"/>
-        <line x1="380" y1="185" x2="420" y2="215" stroke="#6366f1" stroke-width="1" opacity="0.3"/>
-        <circle cx="320" cy="112" r="14" fill="#0f0a2e" stroke="#818cf8" stroke-width="2"/>
-        <circle cx="320" cy="112" r="8"  fill="#818cf8" opacity="0.8"/>
-        <circle cx="220" cy="60"  r="10" fill="#0f0a2e" stroke="#6366f1" stroke-width="1.5"/>
-        <circle cx="220" cy="60"  r="5"  fill="#818cf8" opacity="0.6"/>
-        <circle cx="420" cy="60"  r="10" fill="#0f0a2e" stroke="#6366f1" stroke-width="1.5"/>
-        <circle cx="420" cy="60"  r="5"  fill="#818cf8" opacity="0.6"/>
-        <circle cx="180" cy="140" r="10" fill="#0f0a2e" stroke="#6366f1" stroke-width="1.5"/>
-        <circle cx="180" cy="140" r="5"  fill="#818cf8" opacity="0.6"/>
-        <circle cx="460" cy="140" r="10" fill="#0f0a2e" stroke="#6366f1" stroke-width="1.5"/>
-        <circle cx="460" cy="140" r="5"  fill="#818cf8" opacity="0.6"/>
-        <circle cx="300" cy="185" r="10" fill="#0f0a2e" stroke="#6366f1" stroke-width="1.5"/>
-        <circle cx="300" cy="185" r="5"  fill="#818cf8" opacity="0.6"/>
-        <circle cx="380" cy="185" r="10" fill="#0f0a2e" stroke="#6366f1" stroke-width="1.5"/>
-        <circle cx="380" cy="185" r="5"  fill="#818cf8" opacity="0.6"/>
-        <circle cx="140" cy="30"  r="7" fill="#0f0a2e" stroke="#a78bfa" stroke-width="1.2"/><circle cx="140" cy="30"  r="3" fill="#a78bfa"/>
-        <circle cx="160" cy="90"  r="7" fill="#0f0a2e" stroke="#a78bfa" stroke-width="1.2"/><circle cx="160" cy="90"  r="3" fill="#a78bfa"/>
-        <circle cx="500" cy="30"  r="7" fill="#0f0a2e" stroke="#a78bfa" stroke-width="1.2"/><circle cx="500" cy="30"  r="3" fill="#a78bfa"/>
-        <circle cx="490" cy="90"  r="7" fill="#0f0a2e" stroke="#a78bfa" stroke-width="1.2"/><circle cx="490" cy="90"  r="3" fill="#a78bfa"/>
-        <circle cx="110" cy="170" r="7" fill="#0f0a2e" stroke="#a78bfa" stroke-width="1.2"/><circle cx="110" cy="170" r="3" fill="#a78bfa"/>
-        <circle cx="530" cy="170" r="7" fill="#0f0a2e" stroke="#a78bfa" stroke-width="1.2"/><circle cx="530" cy="170" r="3" fill="#a78bfa"/>
-        <circle cx="260" cy="215" r="7" fill="#0f0a2e" stroke="#a78bfa" stroke-width="1.2"/><circle cx="260" cy="215" r="3" fill="#a78bfa"/>
-        <circle cx="420" cy="215" r="7" fill="#0f0a2e" stroke="#a78bfa" stroke-width="1.2"/><circle cx="420" cy="215" r="3" fill="#a78bfa"/>
+      <svg viewBox="0 0 400 220" preserveAspectRatio="xMidYMid slice">
+        <rect width="400" height="220" fill="#080808"/>
+        <line x1="200" y1="110" x2="120" y2="60" stroke="#2a2a2a" stroke-width="1"/>
+        <line x1="200" y1="110" x2="280" y2="60" stroke="#2a2a2a" stroke-width="1"/>
+        <line x1="200" y1="110" x2="95"  y2="140" stroke="#2a2a2a" stroke-width="1"/>
+        <line x1="200" y1="110" x2="305" y2="140" stroke="#2a2a2a" stroke-width="1"/>
+        <line x1="200" y1="110" x2="180" y2="180" stroke="#2a2a2a" stroke-width="1"/>
+        <line x1="200" y1="110" x2="230" y2="180" stroke="#2a2a2a" stroke-width="1"/>
+        <line x1="120" y1="60"  x2="68"  y2="32"  stroke="#1a1a1a" stroke-width="1"/>
+        <line x1="280" y1="60"  x2="335" y2="32"  stroke="#1a1a1a" stroke-width="1"/>
+        <line x1="95"  y1="140" x2="48"  y2="168" stroke="#1a1a1a" stroke-width="1"/>
+        <line x1="305" y1="140" x2="355" y2="168" stroke="#1a1a1a" stroke-width="1"/>
+        <circle cx="200" cy="110" r="10" fill="#080808" stroke="#7c6aff" stroke-width="1.5"/>
+        <circle cx="200" cy="110" r="5"  fill="#7c6aff" opacity=".8"/>
+        <circle cx="120" cy="60"  r="7"  fill="#080808" stroke="#333" stroke-width="1"/>
+        <circle cx="120" cy="60"  r="3"  fill="#7c6aff" opacity=".5"/>
+        <circle cx="280" cy="60"  r="7"  fill="#080808" stroke="#333" stroke-width="1"/>
+        <circle cx="280" cy="60"  r="3"  fill="#7c6aff" opacity=".5"/>
+        <circle cx="95"  cy="140" r="7"  fill="#080808" stroke="#333" stroke-width="1"/>
+        <circle cx="95"  cy="140" r="3"  fill="#00e5ff" opacity=".4"/>
+        <circle cx="305" cy="140" r="7"  fill="#080808" stroke="#333" stroke-width="1"/>
+        <circle cx="305" cy="140" r="3"  fill="#00e5ff" opacity=".4"/>
       </svg>`,
   },
 
   _renderCard({ badge, date, title, description, type, projectUrl, codeUrl }, delay) {
     return `
-      <div class="reveal project-card ${delay}">
-        <div class="relative h-56 overflow-hidden">
-          ${this._illustrations[type] || ''}
-          <div class="proj-overlay"></div>
-          <span class="absolute top-4 left-4 text-xs font-mono px-3 py-1.5 rounded-full"
-                style="background:rgba(15,10,46,0.75);backdrop-filter:blur(8px);border:1px solid rgba(129,140,248,0.25);color:#a5b4fc;">
-            ${badge}
-          </span>
+      <div class="w-card rv ${delay}">
+        <div class="w-card-vis">
+          ${this._illustrations[type] || this._illustrations.server}
+          <div class="w-card-overlay"></div>
+          <span class="w-card-tag">${badge}</span>
+          <div class="w-card-preview">↗ View project</div>
         </div>
-        <div class="p-6">
-          <p class="text-sm mb-1 text-slate-500">${date}</p>
-          <h3 class="text-xl font-bold mb-3" style="color:#f1f5f9;">${title}</h3>
-          <p class="text-slate-400 leading-relaxed text-sm mb-6">${description}</p>
-          <div class="flex gap-3">
-            <a href="${projectUrl}" target="_blank" rel="noopener noreferrer"
-               class="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition">
-              <i data-lucide="external-link" class="w-4 h-4"></i> Ver Projeto
-            </a>
-            <a href="${codeUrl}" target="_blank" rel="noopener noreferrer"
-               class="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition">
-              <i data-lucide="github" class="w-4 h-4"></i> Código
-            </a>
+        <div class="w-card-body">
+          <p class="w-card-year">// ${date}</p>
+          <h3 class="w-card-title">${title}</h3>
+          <p class="w-card-desc">${description}</p>
+          <div class="w-card-links">
+            <a href="${projectUrl}" target="_blank" rel="noopener noreferrer" class="w-link">↗ Deploy</a>
+            <a href="${codeUrl}"    target="_blank" rel="noopener noreferrer" class="w-link">⌥ Source</a>
           </div>
         </div>
       </div>`;
   },
 
   render() {
-    const delays = ['', 'delay-200'];
+    const delays = ['d1', 'd2', 'd3'];
+    const cards  = window.Data.projects
+      .map((p, i) => this._renderCard(p, delays[i] || ''))
+      .join('');
+
     return `
-      <section id="projects" class="py-14 md:py-24" style="position:relative;z-index:1;">
-        <div class="max-w-7xl mx-auto px-5 md:px-10">
-
-          <div class="reveal">
-            <span class="section-badge inline-flex items-center gap-2 text-sm px-4 py-1 rounded-full mb-5"
-                  style="border:1px solid rgba(129,140,248,0.35);color:#a5b4fc;">
-              <span class="w-2 h-2 rounded-full inline-block status-dot" style="background:#818cf8;"></span>
-              Assets Deployados
-            </span>
+      <section id="work">
+        <div class="work-header rv">
+          <div>
+            <div class="s-num">02 — Work</div>
+            <h2 class="s-title">Deployed assets</h2>
           </div>
-          <h2 class="reveal delay-100 font-black mb-10 md:mb-14"
-              style="font-size:clamp(2rem,6vw,3rem);color:#f1f5f9;">Projetos</h2>
-
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            ${window.Data.projects.map((p, i) => this._renderCard(p, delays[i])).join('')}
-          </div>
+          <span class="work-count rv d2">${String(window.Data.projects.length).padStart(4,'0')} projects</span>
+        </div>
+        <div class="drag-wrap" id="drag">
+          ${cards}
+          <div class="w-placeholder rv d3"><span>+ incoming</span></div>
         </div>
       </section>`;
   },

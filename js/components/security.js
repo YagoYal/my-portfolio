@@ -1,41 +1,30 @@
 window.Components = window.Components || {};
 
 window.Components.security = {
-  _renderCard({ icon, title, description }, delay) {
+  _icons: { 'shield-check': '🛡', 'lock': '🔒', 'layers': '⬡' },
+
+  _renderCell({ icon, title, description }, delay) {
     return `
-      <div class="reveal card ${delay}">
-        <div class="icon-box w-14 h-14 rounded-2xl mb-6">
-          <i data-lucide="${icon}" class="w-6 h-6" style="color:#818cf8;"></i>
-        </div>
-        <h3 class="text-lg font-bold mb-3" style="color:#f1f5f9;">${title}</h3>
-        <p class="text-slate-400 leading-relaxed text-sm">${description}</p>
+      <div class="sec-cell rv ${delay}">
+        <div class="sec-icon">${this._icons[icon] || '⬡'}</div>
+        <h3>${title}</h3>
+        <p>${description}</p>
       </div>`;
   },
 
   render() {
-    const delays = ['', 'delay-200', 'delay-400'];
+    const delays = ['d1', 'd2', 'd3'];
     return `
-      <section id="security" class="py-14 md:py-24" style="position:relative;z-index:1;">
-        <div class="max-w-7xl mx-auto px-5 md:px-10">
-
-          <div class="text-center mb-10 md:mb-14">
-            <div class="reveal">
-              <span class="section-badge inline-flex items-center gap-2 text-sm px-4 py-1 rounded-full mb-5"
-                    style="border:1px solid rgba(52,211,153,0.4);color:#6ee7b7;">
-                <span class="w-2 h-2 rounded-full bg-emerald-400 inline-block status-dot"></span>
-                Protocolo de Confiança
-              </span>
-            </div>
-            <h2 class="reveal delay-100 font-black mb-4"
-                style="font-size:clamp(2rem,6vw,3rem);color:#f1f5f9;">Camada de Segurança</h2>
-            <p class="reveal delay-200 text-slate-400 text-lg max-w-lg mx-auto leading-relaxed">
-              Cada linha de código é construída pensando em proteção, performance e confiabilidade.
-            </p>
-          </div>
-
-          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            ${window.Data.securityFeatures.map((f, i) => this._renderCard(f, delays[i])).join('')}
-          </div>
+      <section id="security">
+        <div class="rv">
+          <div class="s-num">04 — Trust Protocol</div>
+          <h2 class="s-title">Security layer</h2>
+        </div>
+        <p class="rv d1" style="color:var(--dim);margin-top:20px;max-width:520px;line-height:1.75;font-size:.95rem;">
+          Every line of code is built with protection, performance and reliability in mind.
+        </p>
+        <div class="sec-grid">
+          ${window.Data.securityFeatures.map((f, i) => this._renderCell(f, delays[i])).join('')}
         </div>
       </section>`;
   },
