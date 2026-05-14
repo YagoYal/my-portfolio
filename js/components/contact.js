@@ -7,69 +7,71 @@ window.Components.contact = {
     { icon: 'linkedin', label: 'LinkedIn', value: 'https://www.linkedin.com/in/yago-s-20628892'   },
   ],
 
-  _renderLink({ icon, label, value }) {
+  _renderLink({ icon, label, value }, delay) {
     const isExternal = value.startsWith('http');
     const href = isExternal ? value : `mailto:${value}`;
     const targetAttrs = isExternal ? ' target="_blank" rel="noopener noreferrer"' : '';
 
     return `
-      <a href="${href}"${targetAttrs} class="flex items-center gap-5 group">
+      <a href="${href}"${targetAttrs} class="reveal ${delay} flex items-center gap-5 group">
         <div class="icon-box w-14 h-14 rounded-2xl">
-          <i data-lucide="${icon}" class="w-6 h-6 text-blue-600"></i>
+          <i data-lucide="${icon}" class="w-6 h-6" style="color:#818cf8;"></i>
         </div>
         <div>
-          <p class="text-xs font-semibold text-slate-400 tracking-widest uppercase mb-0.5">${label}</p>
-          <p class="font-bold text-slate-900 group-hover:text-blue-600 transition">${value}</p>
+          <p class="text-xs font-semibold tracking-widest uppercase mb-0.5" style="color:#475569;">${label}</p>
+          <p class="font-bold transition" style="color:#e2e8f0;"
+             onmouseover="this.style.color='#818cf8'" onmouseout="this.style.color='#e2e8f0'">${value}</p>
         </div>
       </a>`;
   },
 
   render() {
+    const linkDelays = ['delay-100', 'delay-200', 'delay-300'];
     return `
-      <section id="contact" class="py-14 md:py-24">
+      <section id="contact" class="py-14 md:py-24" style="position:relative;z-index:1;">
         <div class="max-w-7xl mx-auto px-5 md:px-10">
+
           <div class="text-center mb-10 md:mb-14">
-            <h2 class="font-black mb-4" style="font-size:clamp(2rem,6vw,3rem);color:#0f172a;">Solicitar Acesso</h2>
-            <p class="text-slate-500 text-lg leading-relaxed">
+            <h2 class="reveal font-black mb-4"
+                style="font-size:clamp(2rem,6vw,3rem);color:#f1f5f9;">Solicitar Acesso</h2>
+            <p class="reveal delay-100 text-slate-400 text-lg leading-relaxed">
               Interessado em colaborar? Envie uma mensagem e vamos construir algo incrível juntos.
             </p>
           </div>
+
           <div class="flex flex-col md:flex-row gap-8 md:gap-12 items-start">
-            <div class="flex-1 card">
+            <div class="reveal reveal-left flex-1 card">
               <form id="contact-form" novalidate>
-
-                <!-- Honeypot: invisível para humanos, bots preenchem e são bloqueados -->
                 <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
-
                 <div class="flex flex-col gap-4">
                   <div>
                     <input type="text" id="field-name" name="name"
                       placeholder="Nome completo" required minlength="2" autocomplete="name" />
-                    <p class="text-red-500 text-xs mt-1 hidden" id="err-name">Informe seu nome.</p>
+                    <p class="text-red-400 text-xs mt-1 hidden" id="err-name">Informe seu nome.</p>
                   </div>
                   <div>
                     <input type="email" id="field-email" name="email"
                       placeholder="E-mail" required autocomplete="email" />
-                    <p class="text-red-500 text-xs mt-1 hidden" id="err-email">Informe um e-mail válido.</p>
+                    <p class="text-red-400 text-xs mt-1 hidden" id="err-email">Informe um e-mail válido.</p>
                   </div>
                   <div>
                     <textarea id="field-message" name="message"
                       rows="6" placeholder="Sua mensagem..." required minlength="10"></textarea>
-                    <p class="text-red-500 text-xs mt-1 hidden" id="err-message">Mensagem deve ter pelo menos 10 caracteres.</p>
+                    <p class="text-red-400 text-xs mt-1 hidden" id="err-message">Mensagem deve ter pelo menos 10 caracteres.</p>
                   </div>
-
                   <div id="form-feedback" class="hidden text-sm font-medium px-4 py-3 rounded-xl"></div>
-
                   <button type="submit" id="submit-btn"
-                    class="inline-flex items-center justify-center gap-2 bg-blue-600 text-white py-4 rounded-xl font-semibold hover:bg-blue-700 transition">
+                    class="btn-primary inline-flex items-center justify-center gap-2 text-white py-4 rounded-xl font-semibold transition"
+                    style="background:#4f46e5;">
                     <i data-lucide="send" class="w-4 h-4"></i>
                     <span id="submit-label">Enviar Mensagem</span>
                   </button>
                 </div>
               </form>
             </div>
-            <div class="flex-1 flex flex-col gap-5 pt-2">
-              ${this._links.map((l) => this._renderLink(l)).join('')}
+
+            <div class="reveal-right flex-1 flex flex-col gap-5 pt-2">
+              ${this._links.map((l, i) => this._renderLink(l, linkDelays[i])).join('')}
             </div>
           </div>
         </div>
@@ -77,9 +79,9 @@ window.Components.contact = {
   },
 
   init() {
-    const form     = document.getElementById('contact-form');
-    const btn      = document.getElementById('submit-btn');
-    const label    = document.getElementById('submit-label');
+    const form  = document.getElementById('contact-form');
+    const btn   = document.getElementById('submit-btn');
+    const label = document.getElementById('submit-label');
 
     if (!form) return;
 
@@ -87,7 +89,7 @@ window.Components.contact = {
       e.preventDefault();
       if (!this._validate()) return;
 
-      btn.disabled  = true;
+      btn.disabled      = true;
       label.textContent = 'Enviando...';
 
       try {
@@ -136,8 +138,13 @@ window.Components.contact = {
     const el = document.getElementById('form-feedback');
     el.textContent = message;
     el.className = type === 'success'
-      ? 'text-sm font-medium px-4 py-3 rounded-xl bg-emerald-50 text-emerald-700'
-      : 'text-sm font-medium px-4 py-3 rounded-xl bg-red-50 text-red-700';
+      ? 'text-sm font-medium px-4 py-3 rounded-xl'
+      : 'text-sm font-medium px-4 py-3 rounded-xl';
+    el.style.background = type === 'success'
+      ? 'rgba(16,185,129,0.12)' : 'rgba(239,68,68,0.12)';
+    el.style.color = type === 'success' ? '#34d399' : '#f87171';
+    el.style.border = type === 'success'
+      ? '1px solid rgba(52,211,153,0.25)' : '1px solid rgba(248,113,113,0.25)';
     el.classList.remove('hidden');
   },
 };

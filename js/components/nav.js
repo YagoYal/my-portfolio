@@ -22,7 +22,7 @@ window.Components.nav = {
 
     return `
       <div class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50">
-        <nav class="bg-white rounded-2xl shadow-xl border border-slate-100 px-4 md:px-7 py-3 flex items-center gap-4 md:gap-7">
+        <nav class="rounded-2xl px-4 md:px-7 py-3 flex items-center gap-4 md:gap-7">
           ${links}
         </nav>
       </div>`;
