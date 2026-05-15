@@ -21,4 +21,14 @@ window.Data.projects = [
     projectUrl: 'https://github.com/YagoYal/backend-tipado',
     codeUrl: 'https://github.com/YagoYal/backend-tipado',
   },
+  {
+    badge: 'Sustainability Assessment',
+    date: '2026',
+    title: 'Avaliação de Sustentabilidade',
+    description:
+      'Plataforma web para avaliação e monitoramento de práticas sustentáveis, permitindo medir indicadores ambientais e gerar relatórios de impacto de forma visual e acessível.',
+    type: 'leaf',
+    projectUrl: 'https://sustainability-assessment-xi.vercel.app',
+    codeUrl: 'https://github.com/YagoYal/Sustainability-assessment',
+  },
 ];

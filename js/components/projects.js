@@ -47,6 +47,28 @@ window.Components.projects = {
         <circle cx="305" cy="140" r="7"  fill="#080808" stroke="#333" stroke-width="1"/>
         <circle cx="305" cy="140" r="3"  fill="#00e5ff" opacity=".4"/>
       </svg>`,
+
+    leaf: `
+      <svg viewBox="0 0 400 220" preserveAspectRatio="xMidYMid slice">
+        <rect width="400" height="220" fill="#080808"/>
+        <circle cx="200" cy="100" r="70" fill="none" stroke="#0e1a0e" stroke-width="40" opacity=".8"/>
+        <circle cx="200" cy="100" r="50" fill="none" stroke="#122012" stroke-width="20" opacity=".6"/>
+        <path d="M200 170 C200 170 140 140 130 90 C120 40 200 20 200 20 C200 20 280 40 270 90 C260 140 200 170 200 170Z" fill="#0a160a" stroke="#1a3a1a" stroke-width="1"/>
+        <path d="M200 170 C200 170 140 140 130 90 C120 40 200 20 200 20 C200 20 280 40 270 90 C260 140 200 170 200 170Z" fill="none" stroke="#00e676" stroke-width=".8" opacity=".4"/>
+        <line x1="200" y1="170" x2="200" y2="30" stroke="#00e676" stroke-width=".8" opacity=".3"/>
+        <line x1="200" y1="110" x2="155" y2="75"  stroke="#00e676" stroke-width=".6" opacity=".2"/>
+        <line x1="200" y1="110" x2="245" y2="75"  stroke="#00e676" stroke-width=".6" opacity=".2"/>
+        <line x1="200" y1="130" x2="162" y2="103" stroke="#00e676" stroke-width=".6" opacity=".2"/>
+        <line x1="200" y1="130" x2="238" y2="103" stroke="#00e676" stroke-width=".6" opacity=".2"/>
+        <circle cx="200" cy="100" r="4" fill="#00e676" opacity=".7"/>
+        <circle cx="200" cy="100" r="8" fill="none" stroke="#00e676" stroke-width="1" opacity=".3"/>
+        <rect x="60"  y="160" width="40" height="8" rx="2" fill="#111" stroke="#1a3a1a" stroke-width=".5"/>
+        <rect x="108" y="155" width="40" height="13" rx="2" fill="#0d0d0d" stroke="#1a3a1a" stroke-width=".5"/>
+        <rect x="156" y="162" width="40" height="6" rx="2" fill="#111" stroke="#00e676" stroke-width=".4" opacity=".5"/>
+        <rect x="204" y="158" width="40" height="10" rx="2" fill="#0d0d0d" stroke="#1a3a1a" stroke-width=".5"/>
+        <rect x="252" y="153" width="40" height="15" rx="2" fill="#111" stroke="#1a3a1a" stroke-width=".5"/>
+        <rect x="300" y="160" width="40" height="8" rx="2" fill="#0d0d0d" stroke="#00e676" stroke-width=".4" opacity=".4"/>
+      </svg>`,
   },
 
   _renderCard({ badge, date, title, description, type, projectUrl, codeUrl }, delay) {
