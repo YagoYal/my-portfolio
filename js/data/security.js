@@ -3,20 +3,20 @@ window.Data = window.Data || {};
 window.Data.securityFeatures = [
   {
     icon: 'shield-check',
-    title: 'Código Imutável',
+    title: 'Immutable Code',
     description:
-      'Arquitetura limpa e livre de bugs, seguindo princípios SOLID e boas práticas de engenharia de software para máxima confiabilidade.',
+      'Clean, bug-free architecture following SOLID principles and software engineering best practices for maximum reliability.',
   },
   {
     icon: 'lock',
-    title: 'Padrões de Criptografia',
+    title: 'Cryptography Standards',
     description:
-      'Implementação de JWT, HTTPS, hashing de senhas e autenticação segura. Proteção de dados em trânsito e em repouso.',
+      'Implementation of JWT, HTTPS, password hashing and secure authentication. Data protection in transit and at rest.',
   },
   {
     icon: 'layers',
-    title: 'Escalabilidade Estrutural',
+    title: 'Structural Scalability',
     description:
-      'Aplicações projetadas para crescer sem comprometer desempenho. Microsserviços, containers Docker e deploy na AWS.',
+      'Applications designed to grow without compromising performance. Microservices, Docker containers and AWS deployment.',
   },
 ];
