@@ -14,7 +14,7 @@ window.Data.projects = [
   {
     badge: 'Typed Backend API',
     date: '2026',
-    title: 'Backend Tipado',
+    title: 'Typed Backend API',
     description:
       'Typed backend focused on structure, data validation and route organization, designed to keep the API more predictable, secure and easy to evolve.',
     type: 'network',
@@ -24,7 +24,7 @@ window.Data.projects = [
   {
     badge: 'Sustainability Assessment',
     date: '2026',
-    title: 'Avaliação de Sustentabilidade',
+    title: 'Sustainability Assessment',
     description:
       'Web platform for evaluating and monitoring sustainable practices, measuring environmental indicators and generating impact reports in a visual and accessible way.',
     type: 'leaf',
