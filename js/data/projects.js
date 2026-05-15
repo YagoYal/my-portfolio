@@ -6,7 +6,7 @@ window.Data.projects = [
     date: '2026',
     title: 'Lunar Ice Detection',
     description:
-      'Aplicação de inteligência artificial para detectar indícios de gelo lunar a partir de dados e visualizações geoespaciais, com interface web publicada na Vercel.',
+      'AI-powered application to detect lunar ice evidence from geospatial data and visualizations, with a web interface deployed on Vercel.',
     type: 'server',
     projectUrl: 'https://advanced-ai-model-lunar-ice-detecti.vercel.app',
     codeUrl: 'https://github.com/YagoYal/Advanced-ai-model-lunar-ice-detection',
@@ -16,7 +16,7 @@ window.Data.projects = [
     date: '2026',
     title: 'Backend Tipado',
     description:
-      'Backend tipado com foco em estrutura, validação de dados e organização de rotas, pensado para manter a API mais previsível, segura e fácil de evoluir.',
+      'Typed backend focused on structure, data validation and route organization, designed to keep the API more predictable, secure and easy to evolve.',
     type: 'network',
     projectUrl: 'https://github.com/YagoYal/backend-tipado',
     codeUrl: 'https://github.com/YagoYal/backend-tipado',
@@ -26,7 +26,7 @@ window.Data.projects = [
     date: '2026',
     title: 'Avaliação de Sustentabilidade',
     description:
-      'Plataforma web para avaliação e monitoramento de práticas sustentáveis, permitindo medir indicadores ambientais e gerar relatórios de impacto de forma visual e acessível.',
+      'Web platform for evaluating and monitoring sustainable practices, measuring environmental indicators and generating impact reports in a visual and accessible way.',
     type: 'leaf',
     projectUrl: 'https://sustainability-assessment-xi.vercel.app',
     codeUrl: 'https://github.com/YagoYal/Sustainability-assessment',
