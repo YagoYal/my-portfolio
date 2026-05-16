@@ -43,7 +43,7 @@ window.Components.hero = {
             Building robust, secure and scalable systems.
           </p>
           <div class="hero-cta">
-            <a href="assets/YagoAlmeida-CV.pdf" download="Yago_Almeida_CV.pdf" class="cta-btn btn-mag">
+            <a href="assets/Yago Almeida — CV.pdf" download="Yago_Almeida_CV.pdf" class="cta-btn btn-mag">
               Download CV <span class="cta-arr"></span>
             </a>
             <a href="#work" class="cta-btn btn-mag" style="opacity:.45">
