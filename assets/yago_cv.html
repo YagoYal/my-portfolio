@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yago Almeida — CV</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --navy: #0d1b2a;
+    --accent: #2563eb;
+    --light: #f8fafc;
+    --muted: #64748b;
+    --border: #e2e8f0;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #f1f5f9;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 32px 16px;
+  }
+
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    background: white;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.12);
+    display: grid;
+    grid-template-columns: 68mm 1fr;
+  }
+
+  /* —— SIDEBAR —— */
+  .sidebar {
+    background: var(--navy);
+    color: white;
+    padding: 32px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .name-block h1 {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+
+  .name-block .title {
+    margin-top: 6px;
+    font-size: 10px;
+    font-weight: 400;
+    color: #93c5fd;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .divider {
+    height: 1px;
+    background: rgba(255,255,255,0.12);
+  }
+
+  .section-label {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #93c5fd;
+    margin-bottom: 8px;
+  }
+
+  .contact-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .contact-list li {
+    font-size: 9.5px;
+    color: #cbd5e1;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    word-break: break-all;
+  }
+
+  .contact-list li .icon { font-size: 10px; flex-shrink: 0; }
+
+  .tech-group { margin-bottom: 8px; }
+
+  .tech-group-label {
+    font-size: 8.5px;
+    font-weight: 600;
+    color: #93c5fd;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 4px;
+  }
+
+  .tags { display: flex; flex-wrap: wrap; gap: 3px; }
+
+  .tag {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.14);
+    color: #e2e8f0;
+    font-size: 9px;
+    padding: 2px 6px;
+    border-radius: 3px;
+  }
+
+  .lang-item {
+    font-size: 9.5px;
+    color: #cbd5e1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+  }
+
+  .lang-badge {
+    background: rgba(37,99,235,0.5);
+    color: #bfdbfe;
+    font-size: 8px;
+    font-weight: 600;
+    padding: 1px 6px;
+    border-radius: 3px;
+  }
+
+  /* —— MAIN —— */
+  .main {
+    padding: 32px 26px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .main-section h2 {
+    font-size: 8.5px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 8px;
+    padding-bottom: 3px;
+    border-bottom: 1.5px solid var(--border);
+  }
+
+  .profile-text {
+    font-size: 10px;
+    color: #334155;
+    line-height: 1.6;
+  }
+
+  /* cards de projeto */
+  .projects-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .project-card {
+    background: #f0f7ff;
+    border-left: 3px solid var(--accent);
+    border-radius: 4px;
+    padding: 10px 13px;
+  }
+
+  .project-card.green {
+    background: #f0fdf4;
+    border-left-color: #16a34a;
+  }
+
+  .project-card.violet {
+    background: #f5f3ff;
+    border-left-color: #7c3aed;
+  }
+
+  .proj-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 2px;
+  }
+
+  .proj-title {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--navy);
+  }
+
+  .proj-year {
+    font-size: 8.5px;
+    color: var(--muted);
+  }
+
+  .proj-stack {
+    font-size: 8.5px;
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 5px;
+    letter-spacing: 0.02em;
+  }
+
+  .project-card.green .proj-stack  { color: #16a34a; }
+  .project-card.violet .proj-stack { color: #7c3aed; }
+
+  .proj-desc {
+    font-size: 9.5px;
+    color: #475569;
+    line-height: 1.5;
+  }
+
+  .proj-doi {
+    display: inline-block;
+    margin-top: 6px;
+    font-size: 8.5px;
+    color: var(--muted);
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    padding: 1px 6px;
+  }
+
+  .proj-live {
+    display: inline-block;
+    margin-top: 6px;
+    font-size: 8.5px;
+    color: var(--accent);
+    background: white;
+    border: 1px solid #bfdbfe;
+    border-radius: 3px;
+    padding: 1px 6px;
+  }
+
+  .project-card.violet .proj-live {
+    color: #7c3aed;
+    border-color: #ddd6fe;
+  }
+
+  /* experiência / educação */
+  .entry { margin-bottom: 9px; }
+  .entry:last-child { margin-bottom: 0; }
+
+  .entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 1px;
+  }
+
+  .entry-title {
+    font-size: 10.5px;
+    font-weight: 600;
+    color: #1e293b;
+  }
+
+  .entry-date { font-size: 8.5px; color: var(--muted); white-space: nowrap; }
+  .entry-org  { font-size: 9px;   color: var(--muted); }
+
+  .entry-desc {
+    font-size: 9px;
+    color: #475569;
+    margin-top: 2px;
+    line-height: 1.5;
+  }
+
+  /* —— PRINT —— */
+  @media print {
+    @page { size: A4; margin: 0; }
+    body { background: white; padding: 0; }
+    .page { box-shadow: none; width: 210mm; min-height: 297mm; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <div class="name-block">
+      <h1>Yago<br>Almeida</h1>
+      <div class="title">Desenvolvedor Fullstack</div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div>
+      <div class="section-label">Contato</div>
+      <ul class="contact-list">
+        <li><span class="icon">✆</span>(11) 96070-1063</li>
+        <li><span class="icon">✉</span>yagoalcontact@gmail.com</li>
+        <li><span class="icon">⌥</span>github.com/YagoYal</li>
+      </ul>
+    </div>
+
+    <div class="divider"></div>
+
+    <div>
+      <div class="section-label">Tecnologias</div>
+
+      <div class="tech-group">
+        <div class="tech-group-label">Backend</div>
+        <div class="tags">
+          <span class="tag">Java</span><span class="tag">Spring Boot</span>
+          <span class="tag">Python</span><span class="tag">FastAPI</span>
+          <span class="tag">Node.js</span><span class="tag">Fastify</span>
+          <span class="tag">API REST</span><span class="tag">JWT</span>
+        </div>
+      </div>
+
+      <div class="tech-group">
+        <div class="tech-group-label">Frontend</div>
+        <div class="tags">
+          <span class="tag">React</span><span class="tag">Vue 3</span>
+          <span class="tag">Vite</span><span class="tag">JavaScript</span>
+          <span class="tag">TypeScript</span><span class="tag">Tailwind CSS</span>
+          <span class="tag">HTML/CSS</span>
+        </div>
+      </div>
+
+      <div class="tech-group">
+        <div class="tech-group-label">Dados / IA</div>
+        <div class="tags">
+          <span class="tag">PyTorch</span><span class="tag">NumPy</span>
+          <span class="tag">PostgreSQL</span><span class="tag">Redis</span>
+          <span class="tag">Drizzle ORM</span>
+        </div>
+      </div>
+
+      <div class="tech-group">
+        <div class="tech-group-label">Cloud / DevOps</div>
+        <div class="tags">
+          <span class="tag">AWS</span><span class="tag">Docker</span>
+          <span class="tag">GitHub Actions</span><span class="tag">Railway</span>
+          <span class="tag">Vercel</span><span class="tag">Netlify</span>
+        </div>
+      </div>
+
+      <div class="tech-group">
+        <div class="tech-group-label">Outros</div>
+        <div class="tags">
+          <span class="tag">Git</span><span class="tag">Maven</span>
+          <span class="tag">Swagger</span><span class="tag">RabbitMQ</span>
+          <span class="tag">Zod</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div>
+      <div class="section-label">Idiomas</div>
+      <div class="lang-item"><span>Inglês</span><span class="lang-badge">B2</span></div>
+      <div class="lang-item"><span>Português</span><span class="lang-badge">Nativo</span></div>
+    </div>
+
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <div class="main-section">
+      <h2>Perfil</h2>
+      <p class="profile-text">
+        Desenvolvedor Fullstack com experiência em backends Java/Spring Boot, Python/FastAPI e Node.js/Fastify,
+        frontend React e Vue 3, e integração de modelos de IA. Projetos entregues com CI/CD, Docker,
+        mensageria assíncrona e documentação Swagger — incluindo software científico publicado com DOI na Zenodo.
+      </p>
+    </div>
+
+    <div class="main-section">
+      <h2>Projetos</h2>
+      <div class="projects-grid">
+
+        <div class="project-card violet">
+          <div class="proj-header">
+            <span class="proj-title">SustainHub</span>
+            <span class="proj-year">2026</span>
+          </div>
+          <div class="proj-stack">Java · Spring Boot · Vue 3 · Vite · PostgreSQL · Redis · RabbitMQ · Docker · GitHub Actions</div>
+          <div class="proj-desc">
+            Plataforma fullstack de avaliação de sustentabilidade ESG com critérios ponderados e versionamento
+            histórico. Relatórios assíncronos via RabbitMQ com retry/DLQ, exportação em PDF e Excel,
+            rate limiting, observabilidade com Prometheus e Grafana, e deploy contínuo no Railway e Vercel.
+          </div>
+          <span class="proj-live">sustainability-assessment-xi.vercel.app</span>
+        </div>
+
+        <div class="project-card green">
+          <div class="proj-header">
+            <span class="proj-title">backend-tipado</span>
+            <span class="proj-year">2026</span>
+          </div>
+          <div class="proj-stack">Node.js 22 · Fastify · TypeScript · PostgreSQL · Redis · Drizzle ORM · Docker</div>
+          <div class="proj-desc">
+            API REST com autenticação JWT + refresh tokens rotativos, blacklist Redis, rate limiting,
+            audit log, sanitização de input e arquitetura em camadas (Route → Service → Repository).
+            Documentação Swagger, testes unitários e de integração com cobertura.
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="proj-header">
+            <span class="proj-title">Lunar Ice Intelligence</span>
+            <span class="proj-year">2025 – 2026</span>
+          </div>
+          <div class="proj-stack">Python · FastAPI · React · Vite · PyTorch · Docker · GitHub Actions</div>
+          <div class="proj-desc">
+            Sistema fullstack de detecção de gelo lunar com CNN + física subsuperficial + Reinforcement Learning.
+            Backend REST, frontend interativo com mapas em tempo real e pipeline CI/CD automatizado.
+          </div>
+          <span class="proj-live">https://advanced-ai-model-lunar-ice-detecti.vercel.app</span>
+          <span class="proj-doi">DOI: 10.5281/zenodo.20014594</span>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="main-section">
+      <h2>Experiência</h2>
+
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Recepcionista</span>
+          <span class="entry-date">Mai 2025 – Ago 2025</span>
+        </div>
+        <div class="entry-org">Hotel Villa Rossa</div>
+        <div class="entry-desc">Atendimento em inglês, gestão de reservas e comunicação com hóspedes internacionais.</div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Atendimento / Abastecimento</span>
+          <span class="entry-date">Set 2022 – Mar 2024</span>
+        </div>
+        <div class="entry-org">Tenda Atacado</div>
+      </div>
+
+    </div>
+
+    <div class="main-section">
+      <h2>Educação</h2>
+
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Sistemas de Informação (Bacharelado)</span>
+          <span class="entry-date">2024 – atual</span>
+        </div>
+        <div class="entry-org">Centro Universitário FMU, São Paulo</div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Tecnólogo em Sistemas para Internet</span>
+          <span class="entry-date">concluído Jul 2020</span>
+        </div>
+        <div class="entry-org">Uninove, São Paulo</div>
+      </div>
+
+    </div>
+
+  </main>
+</div>
+</body>
+</html>
