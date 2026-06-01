@@ -8,7 +8,7 @@ window.Data.projects = [
     description:
       'AI-powered application to detect lunar ice evidence from geospatial data and visualizations, with a web interface deployed on Vercel.',
     type: 'server',
-    projectUrl: 'https://advanced-ai-model-lunar-ice-detecti.vercel.app',
+    projectUrl: 'https://lunar-ice.vercel.app',
     codeUrl: 'https://github.com/YagoYal/Advanced-ai-model-lunar-ice-detection',
   },
   {
